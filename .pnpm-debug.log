@@ -1,0 +1,109 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "lucy-vscode",
+      "displayName": "lucy",
+      "description": "Soft but clear syntax theme",
+      "version": "2.8.2",
+      "publisher": "juliettepretot",
+      "repository": "https://github.com/juliettepretot/lucy-vscode",
+      "scripts": {
+        "build": "node --experimental-modules src/index.mjs",
+        "release": "npm run build && git add dist && git commit -m build-theme && npm version patch & vsce publish && git push"
+      },
+      "engines": {
+        "vscode": "^1.26.0"
+      },
+      "categories": [
+        "Themes"
+      ],
+      "icon": "static/icon.png",
+      "contributes": {
+        "themes": [
+          {
+            "label": "lucy",
+            "uiTheme": "vs-dark",
+            "path": "./dist/lucy.json"
+          },
+          {
+            "label": "lucy-evening",
+            "uiTheme": "vs-dark",
+            "path": "./dist/lucy-evening.json"
+          }
+        ]
+      },
+      "tags": [
+        "soft",
+        "clear",
+        "pink",
+        "dark theme",
+        "color-theme",
+        "monokai"
+      ],
+      "devDependencies": {
+        "clean-slate-lint": "^1.0.9"
+      },
+      "husky": {
+        "hooks": {
+          "pre-commit": "./node_modules/.bin/clean-slate-lint",
+          "pre-rewrite": "./node_modules/.bin/clean-slate-lint"
+        }
+      },
+      "dependencies": {
+        "chroma-js": "^2.1.0"
+      }
+    },
+    "prefix": "/Users/ragokan/Downloads/lucy-vscode-theme-master"
+  },
+  "2 debug pnpm:context": {
+    "currentLockfileExists": false,
+    "storeDir": "/Users/ragokan/.pnpm-store/v3",
+    "virtualStoreDir": "/Users/ragokan/Downloads/lucy-vscode-theme-master/node_modules/.pnpm"
+  },
+  "3 debug pnpm:stage": {
+    "prefix": "/Users/ragokan/Downloads/lucy-vscode-theme-master",
+    "stage": "resolution_started"
+  },
+  "4 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/chroma-js/2.4.2",
+    "wanted": {
+      "dependentId": ".",
+      "name": "chroma-js",
+      "rawSpec": "^2.1.0"
+    }
+  },
+  "5 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/chroma-js/2.4.2",
+    "requester": "/Users/ragokan/Downloads/lucy-vscode-theme-master",
+    "status": "resolved"
+  },
+  "6 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/chroma-js/2.4.2",
+    "size": 85982,
+    "status": "started"
+  },
+  "7 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/chroma-js/2.4.2",
+    "requester": "/Users/ragokan/Downloads/lucy-vscode-theme-master",
+    "status": "fetched"
+  },
+  "8 debug pnpm:update-check": {
+    "currentVersion": "6.32.3",
+    "latestVersion": "6.32.3"
+  },
+  "9 error pnpm": {
+    "code": "ERR_PNPM_MALFORMED_METADATA",
+    "hint": "This might mean that the package was unpublished from the registry",
+    "pkgsStack": [],
+    "err": {
+      "name": "pnpm",
+      "message": "Received malformed metadata for \"clean-slate-lint\"",
+      "code": "ERR_PNPM_MALFORMED_METADATA",
+      "stack": "pnpm: Received malformed metadata for \"clean-slate-lint\"\n    at default_1 (/Users/ragokan/Library/pnpm-global/5/node_modules/.pnpm/pnpm@6.32.3/node_modules/pnpm/dist/pnpm.cjs:85351:15)\n    at exports2.default (/Users/ragokan/Library/pnpm-global/5/node_modules/.pnpm/pnpm@6.32.3/node_modules/pnpm/dist/pnpm.cjs:85490:60)\n    at runMicrotasks (<anonymous>)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at async resolveNpm (/Users/ragokan/Library/pnpm-global/5/node_modules/.pnpm/pnpm@6.32.3/node_modules/pnpm/dist/pnpm.cjs:85903:22)\n    at async Object.resolve (/Users/ragokan/Library/pnpm-global/5/node_modules/.pnpm/pnpm@6.32.3/node_modules/pnpm/dist/pnpm.cjs:86117:34)\n    at async run (/Users/ragokan/Library/pnpm-global/5/node_modules/.pnpm/pnpm@6.32.3/node_modules/pnpm/dist/pnpm.cjs:74193:23)"
+    }
+  }
+}

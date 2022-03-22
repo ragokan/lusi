@@ -1,0 +1,29 @@
+export interface IColors {
+  background1: string;
+  background2: string;
+  background3: string;
+  background3Half: string;
+  background4: string;
+  selection: string;
+  dim1: string;
+  dim2: string;
+  dim3: string;
+  dim4: string;
+  pure1: string;
+  pure2: string;
+  const: string;
+  accent1: string;
+  accent2: string;
+  call: string;
+  base1: string;
+  base2: string;
+  translucent: string;
+  translucent2: string;
+  translucent3: string;
+  translucent4: string;
+  translucent5: string;
+  translucent6: string;
+  translucent7: string;
+  translucent8: string;
+  translucent9: string;
+}
