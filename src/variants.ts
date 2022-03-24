@@ -14,6 +14,6 @@ export const kVariants = {
     const newGreen = clamp(green * (1 - 0.01 * (1 - sum / 800)));
     const newBlue = clamp(sum - (newRed + newGreen));
 
-    return chroma.gl(newRed, newGreen, newBlue, alpha).hex();
+    return chroma(newRed, newGreen, newBlue, alpha).hex();
   },
 };

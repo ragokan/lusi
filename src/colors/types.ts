@@ -1,9 +1,9 @@
 export interface IColors {
-  background1: string;
-  background2: string;
-  background3: string;
-  background3Half: string;
-  background4: string;
+  activityBarBackground: string;
+  explorerBackground: string;
+  codeBackground: string;
+  inputBackground: string;
+  terminalBackground: string;
   selection: string;
   dim1: string;
   dim2: string;
