@@ -3351,6 +3351,13 @@ var getTheme_default = ({ name, colors: colors2 }) => ({
   },
   tokenColors: [
     {
+      name: "Amazing",
+      scope: ["variable.other.readwrite.ts"],
+      settings: {
+        foreground: colors2.call
+      }
+    },
+    {
       scope: [
         "comment",
         "comment keyword",
@@ -3523,10 +3530,7 @@ var getTheme_default = ({ name, colors: colors2 }) => ({
       }
     },
     {
-      scope: [
-        "entity.name.tag",
-        "entity.name.tag.js.jsx support.class.component.js.jsx"
-      ],
+      scope: ["entity.name.tag", "entity.name.tag.js.jsx support.class.component.js.jsx"],
       settings: {
         foreground: colors2.base1
       }
@@ -3656,37 +3660,25 @@ var getTheme_default = ({ name, colors: colors2 }) => ({
       }
     },
     {
-      scope: [
-        "markup.inserted",
-        "markup.inserted punctuation.definition.inserted"
-      ],
+      scope: ["markup.inserted", "markup.inserted punctuation.definition.inserted"],
       settings: {
         foreground: colors2.call
       }
     },
     {
-      scope: [
-        "markup.deleted",
-        "markup.deleted punctuation.definition.deleted"
-      ],
+      scope: ["markup.deleted", "markup.deleted punctuation.definition.deleted"],
       settings: {
         foreground: colors2.base1
       }
     },
     {
-      scope: [
-        "markup.changed",
-        "markup.changed punctuation.definition.changed"
-      ],
+      scope: ["markup.changed", "markup.changed punctuation.definition.changed"],
       settings: {
         foreground: colors2.base1
       }
     },
     {
-      scope: [
-        "markup.ignored",
-        "markup.ignored punctuation.definition.ignored"
-      ],
+      scope: ["markup.ignored", "markup.ignored punctuation.definition.ignored"],
       settings: {
         foreground: colors2.dim3
       }
@@ -3717,10 +3709,7 @@ var getTheme_default = ({ name, colors: colors2 }) => ({
       }
     },
     {
-      scope: [
-        "meta.function-call",
-        "meta.function-call.arguments meta.function-call"
-      ],
+      scope: ["meta.function-call", "meta.function-call.arguments meta.function-call"],
       settings: {
         foreground: colors2.call
       }
@@ -4210,10 +4199,7 @@ var getTheme_default = ({ name, colors: colors2 }) => ({
       }
     },
     {
-      scope: [
-        "variable.language",
-        "variable.parameter.function.language.special.self.python"
-      ],
+      scope: ["variable.language", "variable.parameter.function.language.special.self.python"],
       settings: {
         fontStyle: "italic",
         foreground: colors2.dim4

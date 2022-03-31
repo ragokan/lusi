@@ -260,6 +260,13 @@ export default ({ name, colors }: Props) => ({
   },
   tokenColors: [
     {
+      name: "Amazing",
+      scope: ["variable.other.readwrite.ts"],
+      settings: {
+        foreground: colors.call,
+      },
+    },
+    {
       scope: [
         "comment",
         "comment keyword",
@@ -432,10 +439,7 @@ export default ({ name, colors }: Props) => ({
       },
     },
     {
-      scope: [
-        "entity.name.tag",
-        "entity.name.tag.js.jsx support.class.component.js.jsx",
-      ],
+      scope: ["entity.name.tag", "entity.name.tag.js.jsx support.class.component.js.jsx"],
       settings: {
         foreground: colors.base1,
       },
@@ -464,8 +468,7 @@ export default ({ name, colors }: Props) => ({
       },
     },
     {
-      scope:
-        "entity.other.attribute-name.pseudo-class.cssentity.other.pseudo-class.css",
+      scope: "entity.other.attribute-name.pseudo-class.cssentity.other.pseudo-class.css",
       settings: {
         fontStyle: "italic",
         foreground: colors.accent1,
@@ -566,37 +569,25 @@ export default ({ name, colors }: Props) => ({
       },
     },
     {
-      scope: [
-        "markup.inserted",
-        "markup.inserted punctuation.definition.inserted",
-      ],
+      scope: ["markup.inserted", "markup.inserted punctuation.definition.inserted"],
       settings: {
         foreground: colors.call,
       },
     },
     {
-      scope: [
-        "markup.deleted",
-        "markup.deleted punctuation.definition.deleted",
-      ],
+      scope: ["markup.deleted", "markup.deleted punctuation.definition.deleted"],
       settings: {
         foreground: colors.base1,
       },
     },
     {
-      scope: [
-        "markup.changed",
-        "markup.changed punctuation.definition.changed",
-      ],
+      scope: ["markup.changed", "markup.changed punctuation.definition.changed"],
       settings: {
         foreground: colors.base1,
       },
     },
     {
-      scope: [
-        "markup.ignored",
-        "markup.ignored punctuation.definition.ignored",
-      ],
+      scope: ["markup.ignored", "markup.ignored punctuation.definition.ignored"],
       settings: {
         foreground: colors.dim3,
       },
@@ -627,10 +618,7 @@ export default ({ name, colors }: Props) => ({
       },
     },
     {
-      scope: [
-        "meta.function-call",
-        "meta.function-call.arguments meta.function-call",
-      ],
+      scope: ["meta.function-call", "meta.function-call.arguments meta.function-call"],
       settings: {
         foreground: colors.call,
       },
@@ -1120,10 +1108,7 @@ export default ({ name, colors }: Props) => ({
       },
     },
     {
-      scope: [
-        "variable.language",
-        "variable.parameter.function.language.special.self.python",
-      ],
+      scope: ["variable.language", "variable.parameter.function.language.special.self.python"],
       settings: {
         fontStyle: "italic",
         foreground: colors.dim4,
