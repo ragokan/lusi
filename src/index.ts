@@ -8,7 +8,8 @@ const getExportPath = (name: string) => `./output/${name}.json`;
 
 const handler = async () => {
   try {
-    Object.entries(kVariants).forEach(([variantName, getColor]) => {
+    // Default themes
+    const defaultThemes = Object.entries(kVariants).map(([variantName, getColor]) => {
       const themeWithColors = getTheme({
         name: variantName,
         colors: Object.entries(colors).reduce<IColors>(
@@ -20,11 +21,17 @@ const handler = async () => {
         ),
       });
 
-      writeFileSync(
-        getExportPath(variantName),
-        JSON.stringify(themeWithColors)
-      );
+      writeFileSync(getExportPath(variantName), JSON.stringify(themeWithColors));
+      return themeWithColors;
     });
+
+    // Themes without italic styles
+    defaultThemes.forEach((theme) => {
+      const copyTheme = { ...theme };
+      copyTheme.tokenColors.forEach((color) => void delete color.settings.fontStyle);
+      writeFileSync(getExportPath(`${theme.name}-noItalics`), JSON.stringify(copyTheme));
+    });
+
     console.log("🌺 Theme built. 💅");
   } catch (error) {
     console.log(error);

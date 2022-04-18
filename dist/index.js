@@ -4311,7 +4311,7 @@ var colors = {
 var getExportPath = (name) => `./output/${name}.json`;
 var handler = async () => {
   try {
-    Object.entries(kVariants).forEach(([variantName, getColor]) => {
+    const defaultThemes = Object.entries(kVariants).map(([variantName, getColor]) => {
       const themeWithColors = getTheme_default({
         name: variantName,
         colors: Object.entries(colors).reduce((acc, [colorName, colorValue]) => __spreadProps(__spreadValues({}, acc), {
@@ -4319,6 +4319,12 @@ var handler = async () => {
         }), {})
       });
       (0, import_fs.writeFileSync)(getExportPath(variantName), JSON.stringify(themeWithColors));
+      return themeWithColors;
+    });
+    defaultThemes.forEach((theme) => {
+      const copyTheme = __spreadValues({}, theme);
+      copyTheme.tokenColors.forEach((color) => void delete color.settings.fontStyle);
+      (0, import_fs.writeFileSync)(getExportPath(`${theme.name}-noItalics`), JSON.stringify(copyTheme));
     });
     console.log("\u{1F33A} Theme built. \u{1F485}");
   } catch (error) {

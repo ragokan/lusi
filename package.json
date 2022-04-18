@@ -29,6 +29,16 @@
         "label": "lusi-evening",
         "uiTheme": "vs-dark",
         "path": "./output/lusi-evening.json"
+      },
+      {
+        "label": "lusi no-italics",
+        "uiTheme": "vs-dark",
+        "path": "./output/lusi-noItalics.json"
+      },
+      {
+        "label": "lusi-evening no-italics",
+        "uiTheme": "vs-dark",
+        "path": "./output/lusi-evening-noItalics.json"
       }
     ]
   },
