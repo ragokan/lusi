@@ -3347,7 +3347,9 @@ var getTheme_default = ({ name, colors: colors2 }) => ({
     "gitDecoration.deletedResourceForeground": colors2.base1,
     "gitDecoration.untrackedResourceForeground": colors2.accent2,
     "gitDecoration.ignoredResourceForeground": colors2.dim1,
-    "gitDecoration.conflictingResourceForeground": colors2.accent2
+    "gitDecoration.conflictingResourceForeground": colors2.accent2,
+    "editorInlayHint.foreground": colors2.dim4,
+    "editorInlayHint.background": colors2.dim1
   },
   tokenColors: [
     {
@@ -4254,6 +4256,12 @@ var getTheme_default = ({ name, colors: colors2 }) => ({
       scope: "support.class.component.vue",
       settings: {
         foreground: colors2.base1
+      }
+    },
+    {
+      scope: "inlayHint",
+      settings: {
+        fontStyle: "italic"
       }
     }
   ]

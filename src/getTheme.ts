@@ -257,6 +257,8 @@ export default ({ name, colors }: Props) => ({
     "gitDecoration.untrackedResourceForeground": colors.accent2,
     "gitDecoration.ignoredResourceForeground": colors.dim1,
     "gitDecoration.conflictingResourceForeground": colors.accent2,
+    "editorInlayHint.foreground": colors.dim4,
+    "editorInlayHint.background": colors.dim1,
   },
   tokenColors: [
     {
@@ -1163,6 +1165,13 @@ export default ({ name, colors }: Props) => ({
       scope: "support.class.component.vue",
       settings: {
         foreground: colors.base1,
+      },
+    },
+    // TODO: This is not working currently, find the scope
+    {
+      scope: "inlayHint",
+      settings: {
+        fontStyle: "italic",
       },
     },
   ],
