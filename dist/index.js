@@ -4222,7 +4222,7 @@ var getTheme_default = ({ name, colors: colors2 }) => ({
     {
       scope: "variable.other.constant",
       settings: {
-        foreground: colors2.const
+        foreground: colors2.pure2
       }
     },
     {
