@@ -1131,7 +1131,7 @@ export default ({ name, colors }: Props) => ({
     {
       scope: "variable.other.constant",
       settings: {
-        foreground: colors.pure2,
+        foreground: colors.const,
       },
     },
     {
